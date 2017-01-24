@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tags</title>
+    </head>
+    <body>
+        <p id="demos"></p>
+        <script>
+            document.getElementById("demos").innerHTML = "Wow it changed by me and JavaScript!";
+        </script>
+        <noscript>your browser is very old......</noscript>
+        <table>
+            <thead>
+                <tr>
+                    <th>name
+            <tbody>
+            <template id="row">
+                <tr><td></td></tr>
+            </template>
+        </table>
+        <canvas id="drawing"></canvas>
+        <script>
+            var template = document.querySelector('#row');
+            
+            var clone = template.content.cloneNode(true);
+            var cells = clone.querySelectorAll('td');
+            
+            cells[0].textContent = "my name is!";
+            template.parentNode.appendChild(clone);
+            
+            var canvas = document.getElementById("drawing");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#ff00ff";
+            ctx.fillRect(0, 0, 90, 80);
+        </script>
+    </body>
+</html>
