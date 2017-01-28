@@ -1,4 +1,4 @@
-
+﻿
 * {
     font-family: Helvetica, sans-serif;
     margin: 0;
@@ -75,6 +75,15 @@ body {
     background-color: rgb(25, 25, 25);
 }
 
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+footer {
+    padding-top: 1.125em;
+}
+
 .photo {
     display: block;
     margin-top: 1.125em;
@@ -84,13 +93,4 @@ body {
     border-radius: 50%;
     width: 12em;
     height: 12em;
-}
-
-main {
-    width: 70%;
-    margin: 0 auto;
-}
-
-footer {
-    padding-top: 1.125em;
 }
