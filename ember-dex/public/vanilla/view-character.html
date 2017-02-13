@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>ember-dex character</title>
+        <link rel="stylesheet" type="text/css" href="default.css">
+    </head>
+    <body>
+        <div class="small-top-bar"><a class="logo-home" href="./home.html">ember-dex</a></div>
+        <main id="viewchar">
+            <h1 class="character-name">Solaire of Astora</h1>
+            <div class="character-overview">
+                <img src="./solaire-of-astora.png" class="character-picture" alt="character picture">
+                <p class="character-history">Solaire is a Warrior of Sunlight on his own quest to link the flame. He is a strong knight who chose to become undead so that he could search for his own sun.</p>
+            </div>
+           <table>
+                <tr><td class="side-title"><span class="icon-location"></span> Location</td><td>Undead Burg</td></tr>
+                <tr><td class="side-title"><span class="icon-covenant"></span> Covenent</td><td>Warriors of Sunlight</td></tr>
+                <tr><td class="side-title"><span class="icon-souls"></span> Souls</td><td>1,000</td></tr>
+                <tr><td class="side-title"><span class="icon-items"></span> Items</td><td>White Sign Soapstone, Humanity x2, Sunlight Straight Sword, Sunlight Shield, Sunlight Talisman, Iron and Sun Set</td></tr>
+                <tr><td class="side-title"><span class="icon-merchant"></span> Merchant</td><td>No</td></tr>
+            </table>
+            <table>
+                <tr><td><span class="icon-quest"></span> Quest</td></tr>
+                <tr><td>1. You will first meet Solaire in the Undead Burg, at the opposite end of the bridge where the Hellkite Dragon sits. </td></tr>
+                <tr><td>2. After speaking to him, he can then be found in Anor Londo at the bonfire after the silver knight archers.</td></tr>
+            </table>
+            <form action="./home.html" class="note-form" method="POST">
+                <textarea class="note-field" placeholder="personal notes"></textarea>
+                <div class="note-form-wrap">
+                    <input class="small-button" type="submit" value="save notes">
+                    <label class="pin-character-label"><input id="pin-character" type="checkbox" name="pin-character"/>Pin character to home?</label>
+                </div>
+            </form>
+        </main>
+        <footer id="viewchar-foot">
+            <div class="left-link"><a href="./home.html">back to home</a></div>
+        </footer>
+    </body>
+</html>
