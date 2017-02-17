@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>ember-dex new user</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="default.css">
+    </head>
+    <body>
+        <div class="logo">ember-dex</div>
+        <main>
+            <h1 class="subtitle">create account</h1>
+            <form action="./home.html" method="POST">
+                <div class="field">
+                    <label class="generic-label" for="email-address"><span class="icon-user"></span></label><!--
+                    --><input id="email-address" class="generic-text" type="email" name="email-address" placeholder="email address" required/>
+                </div>
+                <div class="field">
+                    <label class="generic-label" for="login-password"><span class="icon-password"></span></label><!--
+                    --><input id="login-password" class="generic-text" type="password" name="login-password" placeholder="password" required/>
+                </div>
+                <div class="field">
+                    <label class="generic-label" for="confirm-password"><span class="icon-password"></span></label><!--
+                    --><input id="confirm-password" class="generic-text" type="password" name="confirm-password" placeholder="confirm password" required/>
+                </div>
+                <div class="field-remember-me">
+                    <label id="remember-me-label"><input id="remember-me" type="checkbox" name="remember-me"/>Remember me?</label>
+                </div>
+                <input class="generic-button" type="submit" value="SIGN UP">
+            </form>
+            <div class="bottom-links">
+                <div class="left-link"><a href="./index.html">back to login</a></div>
+            </div>
+        </main>
+    </body>
+</html>
