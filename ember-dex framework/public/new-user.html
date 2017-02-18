@@ -3,33 +3,32 @@
     <head>
         <title>ember-dex new user</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="default.css">
+        <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="add.css">
     </head>
     <body>
-        <div class="logo">ember-dex</div>
-        <main>
-            <h1 class="subtitle">create account</h1>
-            <form action="./home.html" method="POST">
-                <div class="field">
-                    <label class="generic-label" for="email-address"><span class="icon-user"></span></label><!--
-                    --><input id="email-address" class="generic-text" type="email" name="email-address" placeholder="email address" required/>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">ember-dex</a>
                 </div>
-                <div class="field">
-                    <label class="generic-label" for="login-password"><span class="icon-password"></span></label><!--
-                    --><input id="login-password" class="generic-text" type="password" name="login-password" placeholder="password" required/>
-                </div>
-                <div class="field">
-                    <label class="generic-label" for="confirm-password"><span class="icon-password"></span></label><!--
-                    --><input id="confirm-password" class="generic-text" type="password" name="confirm-password" placeholder="confirm password" required/>
-                </div>
-                <div class="field-remember-me">
-                    <label id="remember-me-label"><input id="remember-me" type="checkbox" name="remember-me"/>Remember me?</label>
-                </div>
-                <input class="generic-button" type="submit" value="SIGN UP">
-            </form>
-            <div class="bottom-links">
-                <div class="left-link"><a href="./index.html">back to login</a></div>
             </div>
-        </main>
+        </nav>
+        <div class="container">
+            <form action="home.html">
+                <h2 class="form-signin-heading">Create Account</h2>
+                <label class="sr-only" for="inputEmail">Email address</label>
+                <input id="inputEmail" class="form-control add-bot-space" placeholder="Email address" autofocus="" type="email">
+                <label class="sr-only" for="inputPassword">Password</label>
+                <input id="inputPassword" class="form-control add-bot-space" placeholder="Password" type="password">
+                <label class="sr-only" for="inputConfirmPassword">Confirm Password</label>
+                <input id="inputConfirmPassword" class="form-control" placeholder="Confirm password" type="password">
+                <div class="checkbox">
+                    <label><input value="remember-me" type="checkbox">Remember me</label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block add-bot-space" type="submit">Sign up</button>
+            </form>
+            <a class="btn btn-small btn-primary add-bot-space" href="index.html">Back to login</a>
+        </div>
     </body>
 </html>

@@ -3,34 +3,33 @@
     <head>
         <title>ember-dex settings</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="default.css">
+        <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="add.css">
     </head>
     <body>
-        <div class="logo">ember-dex</div>
-        <main>
-            <h1 class="subtitle">change password</h1>
-            <form action="./home.html" method="POST">
-                <div class="field">
-                    <label class="generic-label" for="login-password"><span class="icon-password"></span></label><!--
-                    --><input id="login-password" class="generic-text" type="password" name="login-password" placeholder="current password" required/>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">ember-dex</a>
                 </div>
-                <div class="field">
-                    <label class="generic-label" for="new-password"><span class="icon-password"></span></label><!--
-                    --><input id="new-password" class="generic-text" type="password" name="new-password" placeholder="new password" required/>
-                </div>
-                <div class="field">
-                    <label class="generic-label" for="confirm-password"><span class="icon-password"></span></label><!--
-                    --><input id="confirm-password" class="generic-text" type="password" name="confirm-password" placeholder="confirm password" required/>
-                </div>
-                <input class="generic-button" type="submit" value="CHANGE PASSWORD">
-            </form>
-            <h1 class="subtitle">clear all notes</h1>
-            <form action="./home.html" method="POST" onsubmit="return confirm('Are you sure you want to clear all of your notes?');">
-                <input class="generic-button" type="submit" value="CLEAR">
-            </form>
-            <div class="bottom-links">
-                <div class="left-link"><a href="./home.html">back to home</a></div>
             </div>
-        </main>
+        </nav>
+        <div class="container">
+            <form action="home.html">
+                <h2 class="form-signin-heading">Change password</h2>
+                <label class="sr-only" for="inputPassword">Password</label>
+                <input id="inputPassword" class="form-control add-bot-space" placeholder="Password" type="password">
+                <label class="sr-only" for="inputNewPassword">Password</label>
+                <input id="inputNewPassword" class="form-control add-bot-space" placeholder="New password" type="password">
+                <label class="sr-only" for="inputConfirmPassword">Password</label>
+                <input id="inputConfirmPassword" class="form-control add-bot-space" placeholder="Confirm password" type="password">
+                <button class="btn btn-lg btn-primary btn-block add-bot-space" type="submit">Change password</button>
+            </form>
+            <form action="home.html">
+                <h2 class="form-signin-heading">Clear all notes</h2>
+                <button class="btn btn-lg btn-primary btn-block add-bot-space" type="submit">Clear</button>
+            </form>
+            <a class="btn btn-primary add-bot-space" href="home.html">Back to home</a>
+        </div>
     </body>
 </html>
