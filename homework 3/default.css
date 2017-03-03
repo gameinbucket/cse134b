@@ -5,6 +5,12 @@
 }
 
 @font-face {
+    font-family: 'princeps';
+    src: url(optimus-princeps-bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
     font-family: 'font-awesome';
     src: url(font-awesome.ttf);
 }
