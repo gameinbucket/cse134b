@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ember-dex</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="splash">Loading...</div>
+        <div id="signin" style="display:none">
+            <input id="account-email" type="email" placeholder="email address">
+            <input id="account-password" type="password" placeholder="password">
+            <br>
+            <br>
+            <button type="button" onclick="google_sign_in()">SIGN IN WITH GOOGLE</button>
+            <button type="button" onclick="email_sign_in()">SIGN IN WITH EMAIL</button>
+            <button type="button" onclick="create_email_account()">CREATE NEW ACCOUNT</button>
+            <button type="button" onclick="sign_out()">SIGN OUT</button>
+        </div>
+        <div id="home" style="display:none">
+            <button type="button" onclick="sign_out()">SIGN OUT</button>
+            <br>
+            <br>
+            <textarea id="notes">get firebase notes here</textarea>
+            <br>
+            <br>
+            <button type="button" onclick="save_note()">save notes</button>
+            <br>
+            <br>
+            <div id="grid">
+                <div id="retrieving">Retrieving...</div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyBqjkMw9iaAFseiTOjiMEBP3_0ZPnSkvQs",
+                authDomain: "ember-dex.firebaseapp.com",
+                databaseURL: "https://ember-dex.firebaseio.com",
+                storageBucket: "ember-dex.appspot.com",
+                messagingSenderId: "537479853798"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="single-page.js"></script>
+    </body>
+</html>
