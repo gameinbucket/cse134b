@@ -1,4 +1,4 @@
-﻿
+
 @font-face {
     font-family: 'princeps';
     src: url(optimus-princeps.ttf);
@@ -65,7 +65,7 @@
 
 .icon-dropdown:before {
     font-family: 'font-awesome';
-    content: "\f0d7";
+    content: "\f0d713";
     font-size: 1.1em;
 }
 
@@ -88,7 +88,7 @@ a {
 }
 
 a:focus, a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 select {
@@ -122,6 +122,15 @@ main {
     font-weight: bold;
     text-align: left;
     white-space: nowrap;
+}
+
+.app-link {
+    display: inline;
+}
+
+.app-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .logo-home {
@@ -248,11 +257,12 @@ main#home-main {
 }
 
 .character-card:hover {
+    cursor: pointer;
     box-shadow: 0 0 6px black;
 }
 
 .character-card:focus, .character-card:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .left-link {
@@ -298,7 +308,7 @@ main#viewchar {
     display: -ms-flex;
     display: -webkit-flex;
     display: flex;
-    
+
     -ms-align-items: center;
     -webkit-align-items: center;
     align-items: center;
@@ -419,8 +429,9 @@ footer#viewchar-foot {
     font-family: 'princeps';
     font-size: 1.5em;
     font-weight: bold;
-    margin: 1em;
-    margin-right: 0.5em;
+    /* margin: 1em;
+    margin-right: 0.5em; */
+    margin: 0.2em;
     white-space: nowrap;
 }
 
@@ -492,7 +503,7 @@ footer#viewchar-foot {
     background-color: #2c3338;
 }
 
-#home-side-links a {
+#home-side-links div {
     padding-right: 1em;
     line-height: 3.5em;
 }
@@ -601,3 +612,22 @@ footer#viewchar-foot {
     margin-bottom: 1.125em;
 }
 
+.feedback {
+    background-color: slategrey;
+}
+
+.feedback:hover {
+    background-color: slategrey;
+}
+
+#upload-contain {
+    margin-top: 2em;
+    overflow: hidden;
+}
+
+#profile-pic {
+    margin-left: 0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
