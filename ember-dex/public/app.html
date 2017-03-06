@@ -16,13 +16,13 @@
         </div>
         <div id="signin" style="display:none">
             <div class="logo">ember-dex</div>
-            <main id="index-main">
+            <div class="main" id="index-main">
                 <div class="field">
-                    <label class="generic-label" for="email-address"><span class="icon-user"></span></label><!--
---><input id="account-email" class="generic-text" type="email"placeholder="email address" required/>
+                    <label class="generic-label" for="account-email"><span class="icon-user"></span></label><!--
+--><input id="account-email" class="generic-text" type="email" placeholder="email address" required/>
                 </div>
                 <div class="field">
-                    <label class="generic-label" for="login-password"><span class="icon-password"></span></label><!--
+                    <label class="generic-label" for="account-password"><span class="icon-password"></span></label><!--
 --><input id="account-password" class="generic-text" type="password" placeholder="password" required/>
                 </div>
                 <button id="email-sign-in" class="generic-button" type="button" onclick="email_sign_in()">EMAIL SIGN IN</button>
@@ -31,14 +31,14 @@
                     <div class="left-link"><div class="app-link" onclick="forgotten()">forgot your password?</div></div>
                     <div class="right-link"><div class="app-link" onclick="signup()">sign up now!</div></div>
                 </div>
-            </main>
-            <footer id="index-footer">
+            </div>
+            <div class="footer" id="index-footer">
                 <a href="./team.html">about us</a>
-            </footer>
+            </div>
         </div>
         <div id="forgot" style="display:none">
             <div class="logo">ember-dex</div>
-            <main>
+            <div class="main">
                 <h1 class="subtitle">account recovery</h1>
                 <div class="field">
                     <label class="generic-label" for="recovery-email"><span class="icon-user"></span></label><!--
@@ -49,22 +49,22 @@
                 <div class="bottom-links">
                     <div class="left-link"><div class="app-link" onclick="forgotten_to_app()">back to home</div></div>
                 </div>
-            </main>
+            </div>
         </div>
         <div id="signup" style="display:none">
             <div class="logo">ember-dex</div>
-            <main>
+            <div class="main">
                 <h1 class="subtitle">create account</h1>
                 <div class="field">
-                    <label class="generic-label" for="email-address"><span class="icon-user"></span></label><!--
+                    <label class="generic-label" for="make-email"><span class="icon-user"></span></label><!--
 --><input id="make-email" class="generic-text" type="email" placeholder="email address" required/>
                 </div>
                 <div class="field">
-                    <label class="generic-label" for="login-password"><span class="icon-password"></span></label><!--
+                    <label class="generic-label" for="make-password"><span class="icon-password"></span></label><!--
 --><input id="make-password" class="generic-text" type="password" placeholder="password" required/>
                 </div>
                 <div class="field">
-                    <label class="generic-label" for="confirm-password"><span class="icon-password"></span></label><!--
+                    <label class="generic-label" for="make-confirm-password"><span class="icon-password"></span></label><!--
 --><input id="make-confirm-password" class="generic-text" type="password" placeholder="confirm password" required/>
                 </div>
                 <span id="result-make-account" class="inner-text" style="display:none"></span>
@@ -72,10 +72,10 @@
                 <div class="bottom-links">
                     <div class="left-link"><div class="app-link" onclick="signup_to_app()">back to home</div></div>
                 </div>
-            </main>
+            </div>
         </div>
         <div id="home" style="display:none">
-            <header id="home-header">
+            <div id="home-header">
                 <img id="profile-pic" src="default-profile.jpg" alt="profile">
                 <span id="small-ember">ember-dex</span>
                 <div id="home-search">
@@ -93,22 +93,22 @@
                         <div class="app-link" onclick="sign_out()">logout</div>
                     </div>
                 </div>
-            </header>
-            <main id="home-main">
+            </div>
+            <div class="main" id="home-main">
                 <div id="retrieving">
                     <br>
                     <span class="icon-souls"></span>
                     <br>
                     Retrieving
                 </div>
-            </main>
+            </div>
         </div>
         <div id="view" style="display:none">
             <div class="small-top-bar"><div class="app-link logo-home" onclick="view_to_home()">ember-dex</div></div>
-            <main id="viewchar">
-                <h1 id="npc" class="character-name"></h1>
+            <div class="main" id="viewchar">
+                <h1 id="npc" class="character-name">npc</h1>
                 <div class="character-overview">
-                    <img id="npc-picture" class="character-picture" alt="character picture">
+                    <img id="npc-picture" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" class="character-picture" alt="character picture">
                     <p id="history" class="character-history"></p>
                 </div>
                 <table>
@@ -129,14 +129,14 @@
                         <label class="pin-character-label"><input id="pin-character" type="checkbox" name="pin-character"/>Pin character to home?</label>
                     </div>
                 </div>
-            </main>
-            <footer id="viewchar-foot">
+            </div>
+            <div class="footer" id="viewchar-foot">
                 <div class="left-link"><div class="app-link" onclick="view_to_home()">back to home</div></div>
-            </footer>
+            </div>
         </div>
         <div id="settings" style="display:none">
             <div class="logo">ember-dex</div>
-            <main>
+            <div class="main">
                 <h1 class="subtitle">change password</h1>
                 <div class="field">
                     <label class="generic-label" for="login-password"><span class="icon-password"></span></label><!--
@@ -162,7 +162,7 @@
                 <div class="bottom-links">
                     <div class="left-link"><div class="app-link" onclick="settings_to_home()">back to home</div></div>
                 </div>
-            </main>
+            </div>
         </div>
         <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
         <script>

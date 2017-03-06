@@ -98,7 +98,7 @@ select {
     text-align-last: center;
 }
 
-main {
+.main {
     width: 90%;
     max-width: 24em;
     margin: 0 auto;
@@ -217,7 +217,7 @@ main {
     background-color: rgb(212, 70, 20);
 }
 
-main#home-main {
+#home-main {
     width: 100%;
     max-width: none;
 
@@ -296,7 +296,7 @@ main#home-main {
     margin-top: 2em;
 }
 
-main#viewchar {
+#viewchar {
     width: 90%;
     max-width: 50em;
     margin: 0 auto;
@@ -402,7 +402,7 @@ td {
     margin-right: 1em;
 }
 
-footer#viewchar-foot {
+#viewchar-foot {
     width: 90%;
     max-width: 50em;
     margin: 2em auto;
@@ -508,16 +508,15 @@ footer#viewchar-foot {
     line-height: 3.5em;
 }
 
+#profile-pic {
+    margin-left: 0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
 @media (max-width: 500px) {
     #home-header {
-        -ms-justify-content: none;
-        -webkit-justify-content: none;
-        justify-content: none;
-
-        -ms-align-items: none;
-        -webkit-align-items: none;
-        align-items: none;
-
         -ms-flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -534,7 +533,15 @@ footer#viewchar-foot {
         display: block;
         margin-top: 1em;
         margin-bottom: 0;
-        width: 90%;
+        width: 99%;
+    }
+    
+    #profile-pic {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #search-filter {
@@ -623,11 +630,4 @@ footer#viewchar-foot {
 #upload-contain {
     margin-top: 2em;
     overflow: hidden;
-}
-
-#profile-pic {
-    margin-left: 0.5em;
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
 }
