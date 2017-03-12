@@ -65,57 +65,44 @@ function sign_out() {
     });
 }
 
-var npcFast = [
-    ['Eygon of Carim', 'eygon-of-carim.jpg'],
-    ['Horace the Hushed', 'horace-the-hushed.jpg'],
-    ['Sir Vilhelm', 'sir-vilhelm.jpg'],
-    ['Solaire of Astora', 'solaire-of-astora.jpg']
-];
-
 var npcDict = [];
 var npcNotes = [];
 
 function list_npc() {
-    var grid = document.getElementById('home-main');
-    var retrieving = document.getElementById('retrieving');
-    
-    for (var i = 0; i < npcFast.length; i++) {
-        var name = npcFast[i][0];
-        var image = npcFast[i][1];
-        var characterCard = document.createElement('div');
-        var nameTag = document.createElement('div');
-        characterCard.style.backgroundImage = 'url("' + image + '")';
-        characterCard.classList.add('character-card');
-        nameTag.classList.add('name-tag');
-        nameTag.innerHTML = name;
-        characterCard.appendChild(nameTag);
-        characterCard.onclick = ((i) => () => view_character(i))(i);
-        grid.appendChild(characterCard);
-    }
-    
-    retrieving.style.display = 'none';
-    
     var user = firebase.auth().currentUser;
     if (!user)
         return;
     var database = firebase.database();
     var storage = firebase.storage();
+    var grid = document.getElementById('home-main');
+    var retrieving = document.getElementById('retrieving');
 
     database.ref('character/').once('value').then(function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
             var name = childSnapshot.key;
             var data = childSnapshot.val();
             npcDict[name] = data;
+            var characterCard = document.createElement('div');
+            characterCard.style.backgroundImage = 'url("' + data.image + '")';
+            characterCard.classList.add('character-card');
+            var nameTag = document.createElement('div');
+            nameTag.classList.add('name-tag');
+            nameTag.innerHTML = name;
+            characterCard.appendChild(nameTag);
+            characterCard.onclick = () => view_character(name);
+            grid.appendChild(characterCard); 
         });
+        retrieving.style.display = 'none';
     });
 }
 
-function view_character(index) {
+function view_character(name) {
     var user = firebase.auth().currentUser;
     if (!user)
         return;
     var database = firebase.database();
     var storage = firebase.storage();
+
     var home = document.getElementById('home');
     var view = document.getElementById('view');
     var npc = document.getElementById('npc');
@@ -128,23 +115,16 @@ function view_character(index) {
     var merchant = document.getElementById('merchant');
     var quest = document.getElementById('quest');
     var notes = document.getElementById('notes');
-    
-    var name = npcFast[index][0];
-    
+
     npc.innerHTML = name;
-    pic.src = npcFast[index][1];
-    
-    if (npcDict[name]) {
-        history.innerHTML = npcDict[name].history;
-        location.innerHTML = npcDict[name].location;
-        covenant.innerHTML = npcDict[name].covenant;
-        souls.innerHTML = npcDict[name].souls;
-        items.innerHTML = npcDict[name].items;
-        merchant.innerHTML = npcDict[name].merchant;
-        quest.innerHTML = npcDict[name].quest;
-    } else {
-        console.log('gotta load this and put it in the cache');
-    }
+    pic.src = npcDict[name].image;
+    history.innerHTML = npcDict[name].history;
+    location.innerHTML = npcDict[name].location;
+    covenant.innerHTML = npcDict[name].covenant;
+    souls.innerHTML = npcDict[name].souls;
+    items.innerHTML = npcDict[name].items;
+    merchant.innerHTML = npcDict[name].merchant;
+    quest.innerHTML = npcDict[name].quest;
 
     if (npcNotes[name]) {
         notes.value = npcNotes[name];
