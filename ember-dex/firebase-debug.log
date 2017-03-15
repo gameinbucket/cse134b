@@ -3,7 +3,49 @@
 [debug] CLI Version:  3.2.1
 [debug] Platform:     win32
 [debug] Node Version: v6.9.4
-[debug] Time:         Sun Mar 12 2017 13:55:52 GMT-0700 (Pacific Daylight Time)
+[debug] Time:         Tue Mar 14 2017 20:35:46 GMT-0700 (Pacific Daylight Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\Nathan\Documents\GitHub\cse134b\ember-dex
+[info] Public Directory: ./public
+[info] 
+[info] Server listening at: http://localhost:5000
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\Nathan\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.2.1
+[debug] Platform:     win32
+[debug] Node Version: v6.9.4
+[debug] Time:         Wed Mar 15 2017 00:03:43 GMT-0700 (Pacific Daylight Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\Nathan\Documents\GitHub\cse134b\ember-dex
+[info] Public Directory: ./public
+[info] 
+[info] Server listening at: http://localhost:5000
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\Nathan\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.2.1
+[debug] Platform:     win32
+[debug] Node Version: v6.9.4
+[debug] Time:         Wed Mar 15 2017 09:30:15 GMT-0700 (Pacific Daylight Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\Nathan\Documents\GitHub\cse134b\ember-dex
+[info] Public Directory: ./public
+[info] 
+[info] Server listening at: http://localhost:5000
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\Nathan\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.2.1
+[debug] Platform:     win32
+[debug] Node Version: v6.9.4
+[debug] Time:         Wed Mar 15 2017 15:55:54 GMT-0700 (Pacific Daylight Time)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [info] Starting Firebase development server...

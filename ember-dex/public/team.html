@@ -3,14 +3,16 @@
     <head>
         <title>ember-dex team</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="app.css">
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" type="text/css" href="team.css">
+        </noscript>
     </head>
     <body>
         <div class="logo">ember-dex</div>
         <main>
             <h1 id="team">Team</h1>
             <h2 class="team-name">Nathan McMillan</h2>
-            <img src="./nathan-mcmillan-photo.jpg" alt="nathan mcmillan photo" class="team-photo">
+            <img src="nathan-mcmillan-photo.jpg" alt="nathan mcmillan photo" class="team-photo">
             <p>Hello! We are the proud creators of the Ember-Dex web-application.
                 Here on our team, we are determined to provide you with an unrivaled quality experience.
                 We have carefully crafted our web-application to suite the needs of you! We want you to have
@@ -23,5 +25,21 @@
                 <div class="left-link"><a href="app.html">back to login</a></div>
             </div>
         </main>
+        <script>
+            var load_styles = function() {
+                var stylesheet = document.createElement('link');
+                stylesheet.href = 'team.css';
+                stylesheet.rel = 'stylesheet';
+                stylesheet.type = 'text/css';
+                document.getElementsByTagName('head')[0].appendChild(stylesheet);
+            };
+            var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+            if (raf) raf(function() {
+                window.setTimeout(load_styles, 0);
+            });
+            else {
+                window.addEventListener('load', load_styles);
+            }
+        </script>
     </body>
 </html>

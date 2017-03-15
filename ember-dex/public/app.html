@@ -4,7 +4,24 @@
         <title>ember-dex</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="app.css">
+        <meta name="theme-color" content="#2c3338">
+        <link rel="manifest" href="manifest.json">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" type="text/css" href="app.css">
+        </noscript>
+        <style>
+            #signin {display:none;}
+            #forgot {display:none;}
+            #signup {display:none;}
+            #home {display:none;}
+            #view {display:none;}
+            #settings {display:none;}
+            #result-make-account {display:none;}
+            #change-password-result {display:none;}
+            #upload-result {display:none;}
+        </style>
     </head>
     <body>
         <div id="splash">
@@ -14,7 +31,7 @@
             <br>
             Loading
         </div>
-        <div id="signin" style="display:none">
+        <div id="signin">
             <div class="logo">ember-dex</div>
             <div class="main" id="index-main">
                 <div class="field">
@@ -36,7 +53,7 @@
                 <a href="./team.html">about us</a>
             </div>
         </div>
-        <div id="forgot" style="display:none">
+        <div id="forgot">
             <div class="logo">ember-dex</div>
             <div class="main">
                 <h1 class="subtitle">account recovery</h1>
@@ -51,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div id="signup" style="display:none">
+        <div id="signup">
             <div class="logo">ember-dex</div>
             <div class="main">
                 <h1 class="subtitle">create account</h1>
@@ -67,31 +84,32 @@
                     <label class="generic-label" for="make-confirm-password"><span class="icon-password"></span></label><!--
 --><input id="make-confirm-password" class="generic-text" type="password" placeholder="confirm password" required/>
                 </div>
-                <span id="result-make-account" class="inner-text" style="display:none"></span>
+                <span id="result-make-account" class="inner-text"></span>
                 <button class="generic-button" type="submit" onclick="create_email_account()">SIGN UP WITH EMAIL</button>
                 <div class="bottom-links">
                     <div class="left-link"><div class="app-link" onclick="signup_to_app()">back to home</div></div>
                 </div>
             </div>
         </div>
-        <div id="home" style="display:none">
+        <div id="home">
             <div id="home-header">
-                <img id="profile-pic" src="default-profile.jpg" alt="profile">
+                <img id="profile-pic" src="default-profile.jpg" width="100" height="100" alt="profile">
                 <span id="small-ember">ember-dex</span>
                 <div id="home-search">
-                    <select id="search-filter">
+                    <select id="search-filter" onchange="filter_cards()">
                         <option value="all">All</option>
                         <option value="ds1">Dark Souls 1</option>
                         <option value="ds2">Dark Souls 2</option>
                         <option value="ds3">Dark Souls 3</option>
                     </select><!--
---><input id="search-box" type="search" name="search-box" placeholder="Search for characters"><!--
---><label id="search-go-label" for="search-go"><span class="icon-search"></span></label><!--
+--><input id="search-box" type="search" placeholder="Search for characters"><!--
+--><label id="search-go-label" for="search-go" onclick="filter_cards()"><span class="icon-search"></span></label><!--
 --><input id="search-go" type="submit" value="search" hidden>
-                    <div id="home-side-links">
-                        <div class="app-link" onclick="settings()">settings</div>
-                        <div class="app-link" onclick="sign_out()">logout</div>
-                    </div>
+                    <select id="home-dropdown" onchange="home_options()">
+                        <option value="options">Options</option>
+                        <option value="settings">Settings</option>
+                        <option value="logout">Logout</option>
+                    </select>
                 </div>
             </div>
             <div class="main" id="home-main">
@@ -103,13 +121,13 @@
                 </div>
             </div>
         </div>
-        <div id="view" style="display:none">
+        <div id="view">
             <div class="small-top-bar"><div class="app-link logo-home" onclick="view_to_home()">ember-dex</div></div>
             <div class="main" id="viewchar">
                 <h1 id="npc" class="character-name">npc</h1>
                 <div class="character-overview">
-                    <img id="npc-picture" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" class="character-picture" alt="character picture">
-                    <p id="history" class="character-history"></p>
+                    <img id="npc-picture" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" width="200" height="200" class="character-picture" alt="character picture">
+                    <p id="history" class="character-history">Retrieving data...</p>
                 </div>
                 <table>
                     <tr><td class="side-title"><span class="icon-location"></span> Location</td><td id="location"></td></tr>
@@ -126,7 +144,6 @@
                     <textarea id="notes" class="note-field" placeholder="personal notes"></textarea>
                     <div class="note-form-wrap">
                         <button id="save-note-button" class="small-button" type="button" onclick="save_notes()">save notes</button>
-                        <label class="pin-character-label"><input id="pin-character" type="checkbox" name="pin-character"/>Pin character to home?</label>
                     </div>
                 </div>
             </div>
@@ -134,29 +151,18 @@
                 <div class="left-link"><div class="app-link" onclick="view_to_home()">back to home</div></div>
             </div>
         </div>
-        <div id="settings" style="display:none">
+        <div id="settings">
             <div class="logo">ember-dex</div>
             <div class="main">
                 <h1 class="subtitle">change password</h1>
-                <div class="field">
-                    <label class="generic-label" for="login-password"><span class="icon-password"></span></label><!--
---><input id="login-password" class="generic-text" type="password" name="login-password" placeholder="current password" required/>
-                </div>
-                <div class="field">
-                    <label class="generic-label" for="new-password"><span class="icon-password"></span></label><!--
---><input id="new-password" class="generic-text" type="password" name="new-password" placeholder="new password" required/>
-                </div>
-                <div class="field">
-                    <label class="generic-label" for="confirm-password"><span class="icon-password"></span></label><!--
---><input id="confirm-password" class="generic-text" type="password" name="confirm-password" placeholder="confirm password" required/>
-                </div>
-                <button class="generic-button" type="button">CHANGE PASSWORD (coming soon)</button>
+                <p id="change-password-result" class="inner-text"></p>
+                <button class="generic-button" type="button" onclick="send_reset_email()">SEND EMAIL FOR CHANGING PASSWORD</button>
                 <h1 class="subtitle">clear all notes</h1>
                 <button class="generic-button" type="button" onclick="clear_notes()">CLEAR</button>
                 <h1 class="subtitle">upload profile picture</h1>
                 <div id="upload-contain">
                     <input id="upload-pic" type="file" onchange="handle_picture(this.files)">
-                    <span id="upload-result" class="inner-text" style="display:none"></span>
+                    <span id="upload-result" class="inner-text"></span>
                 </div>
                 <button class="generic-button" type="button" onclick="delete_picture()">DELETE CURRENT PICTURE</button>
                 <div class="bottom-links">
@@ -164,7 +170,23 @@
                 </div>
             </div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+        <script>
+            var load_styles = function() {
+                var stylesheet = document.createElement('link');
+                stylesheet.href = 'app.css';
+                stylesheet.rel = 'stylesheet';
+                stylesheet.type = 'text/css';
+                document.getElementsByTagName('head')[0].appendChild(stylesheet);
+            };
+
+            var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+            if (raf) {
+                raf(() => window.setTimeout(load_styles, 0));
+            } else {
+                window.addEventListener('load', load_styles);
+            }
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
         <script>
             var config = {
                 apiKey: "AIzaSyBqjkMw9iaAFseiTOjiMEBP3_0ZPnSkvQs",
@@ -173,7 +195,12 @@
                 storageBucket: "ember-dex.appspot.com",
                 messagingSenderId: "537479853798"
             };
-            firebase.initializeApp(config);
+            try {
+                firebase.initializeApp(config);
+            }
+            catch (e) {
+                
+            }
         </script>
         <script src="app.js"></script>
     </body>
