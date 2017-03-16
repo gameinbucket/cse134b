@@ -1,0 +1,261 @@
+{
+    "character" : {
+        "Eygon of Carim" : {
+            "covenant" : "None",
+            "history" : "Guardian to Irina of Carim",
+            "image" : "eygon-of-carim.jpg",
+            "items" : "Moaning Shield, Morne's Great Hammer",
+            "location" : "Undead Settlement",
+            "merchant" : "No",
+            "quest" : "If you kill Irina of Carim he will show up hostile.",
+            "souls" : "1,000"
+        },
+        "Horace the Hushed" : {
+            "covenant" : "Blue Sentinels",
+            "history" : "A companion to Anri of Astora in search of Aldritch.",
+            "image" : "horace-the-hushed.jpg",
+            "items" : "Llewellyn Shield",
+            "location" : "Road of Sacrifices",
+            "merchant" : "No",
+            "quest" : "After progressing to the Catacombs, he will be separated from Anri and later found at the bottom of Smouldering Lake. He will be hostile. If he is not killed here, he will later on kill Anri and put an end to her questline.",
+            "souls" : "2,000"
+        },
+        "Sir Vilhelm" : {
+            "convenant" : "None",
+            "history" : "defender of sister friede in the painted world of ariendel",
+            "image" : "sir-vilhelm.jpg",
+            "items" : "Onyx Blade, Contraption Key",
+            "location" : "Painted World of Ariandel",
+            "merchant" : "No",
+            "quest" : "You will meet him in the Cathedral. Here you must kill him to obtain a key in order to meet Sister Friede.",
+            "souls" : "180,000"
+        },
+        "Solaire of Astora" : {
+            "covenant" : "Warriors of Sunlight",
+            "history" : "Solaire is a Warrior of Sunlight on his own quest to link the flame. He is a strong knight who chose to become undead so that he could search for his own sun.",
+            "image" : "solaire-of-astora.jpg",
+            "items" : "White Sign Soapstone, Humanity x2, Sunlight Straight Sword, Sunlight Shield, Sunlight Talisman, Iron and Sun Set",
+            "location" : "Undead Burg",
+            "merchant" : "No",
+            "quest" : "You will first meet Solaire in the Undead Burg, at the opposite end of the bridge where the Hellkite Dragon sits. After speaking to him, he can then be found in Anor Londo at the bonfire after the silver knight archers.",
+            "souls" : "1,000"
+        }
+    },
+    "character-final" : {
+        "Eygon of Carim" : {
+            "covenant" : "None",
+            "history" : "Guardian to Irina of Carim",
+            "items" : "Moaning Shield, Morne's Great Hammer",
+            "location" : "Undead Settlement",
+            "merchant" : "No",
+            "quest" : "If you kill Irina of Carim he will show up hostile.",
+            "souls" : "1,000"
+        },
+        "Horace the Hushed" : {
+            "covenant" : "Blue Sentinels",
+            "history" : "A companion to Anri of Astora in search of Aldritch.",
+            "items" : "Llewellyn Shield",
+            "location" : "Road of Sacrifices",
+            "merchant" : "No",
+            "quest" : "After progressing to the Catacombs, he will be separated from Anri and later found at the bottom of Smouldering Lake. He will be hostile. If he is not killed here, he will later on kill Anri and put an end to her questline.",
+            "souls" : "2,000"
+        },
+        "Sir Vilhelm" : {
+            "convenant" : "None",
+            "history" : "defender of sister friede in the painted world of ariendel",
+            "items" : "Onyx Blade, Contraption Key",
+            "location" : "Painted World of Ariandel",
+            "merchant" : "No",
+            "quest" : "You will meet him in the Cathedral. Here you must kill him to obtain a key in order to meet Sister Friede.",
+            "souls" : "180,000"
+        },
+        "Solaire of Astora" : {
+            "covenant" : "Warriors of Sunlight",
+            "history" : "Solaire is a Warrior of Sunlight on his own quest to link the flame. He is a strong knight who chose to become undead so that he could search for his own sun.",
+            "items" : "White Sign Soapstone, Humanity x2, Sunlight Straight Sword, Sunlight Shield, Sunlight Talisman, Iron and Sun Set",
+            "location" : "Undead Burg",
+            "merchant" : "No",
+            "quest" : "You will first meet Solaire in the Undead Burg, at the opposite end of the bridge where the Hellkite Dragon sits. After speaking to him, he can then be found in Anor Londo at the bonfire after the silver knight archers.",
+            "souls" : "1,000"
+        },
+        "Lonesome Galvan" : {
+            "covenant" : "None",
+            "history" : "Galvan is a lonely traveler willing to trade items for souls.",
+            "items" : "Gyrm Greataxe",
+            "location" : "No-Man's Wharf",
+            "merchant" : "Yes",
+            "quest" : "You will first meet Galvan in a building full of Dark Stalkers.",
+            "souls" : "1,300"
+        },
+        "Knight Lautrec" : {
+            "covenant" : "None",
+            "history" : "A knight of Carim and a devout of the goddess Fina.",
+            "items" : "Shotel, Parrying Dagger",
+            "location" : "Undead Parish",
+            "merchant" : "No",
+            "quest" : "Locked in a cell located in the church, once released he will be found at the Firelink Shrine and offer you a coin.",
+            "souls" : "1,000"
+        },
+        "Fire Keeper" : {
+            "covenant" : "None",
+            "history" : "The keeper of the fire, it is her job to make sure you stay safe in your journey.",
+            "items" : "None",
+            "location" : "Firelink Shrine",
+            "merchant" : "No",
+            "quest" : "Talk to her to spend souls on gaining power.",
+            "souls" : "0"
+        },
+        "Blacksmith Andre" : {
+            "covenant" : "None",
+            "history" : "A humble blacksmith, he wishes you to stay safe so that he may continue forging items.",
+            "items" : "None",
+            "location" : "Firelink Shrine",
+            "merchant" : "Yes",
+            "quest" : "Talk to him for reinforcement, imbuing, and realloting estus.",
+            "souls" : "0"
+        },
+        "Giant Blacksmith" : {
+            "covenant" : "None",
+            "history" : "A giant residing in the cathedral of Anor Londo. He specializes in unique weapons.",
+            "items" : "Blacksmith Giant Hammer",
+            "location" : "Anor Londo",
+            "merchant" : "Yes",
+            "quest" : "He will reinforce unique items for the player, and sells rare titanite.",
+            "souls" : "3,000"
+        },
+        "Sif the Great Grey Wolf" : {
+            "covenant" : "None",
+            "history" : "The companion of Sir Artorias. After his companion's passing, Sif became the guardian of Artorias' grave in the Darkroot Garden.",
+            "items" : "Soul of Sif, Covenant of Artorias, Humanity",
+            "location" : "Darkroot Garden",
+            "merchant" : "No",
+            "quest" : "After the second stone bridge, you must fight him in order to gain access to a ring that lets you traverse the abyss.",
+            "souls" : "40,000"
+        },
+        "Crestfallen Saulden" : {
+            "covenant" : "Way of the Blue",
+            "history" : "A sad warrior who has lost hope, now he sits in Majula awaiting his fate.",
+            "items" : "Ring of Steel Protection",
+            "location" : "Majula",
+            "merchant" : "No",
+            "quest" : "After you get Melentia, Licia, Rosebeth, and Chloanne to Majula, he will give you a Soul Vessel.",
+            "souls" : "800"
+        },
+        "Emerald Herald" : {
+            "covenant" : "None",
+            "history" : "She was created specifically to break the undead curse but failed to do so. Now she draws the Undead to Drangleic in order to find the one who will break it.",
+            "items" : "Aged Feather",
+            "location" : "Majula",
+            "merchant" : "No",
+            "quest" : "She gives you the means of increasing your power, as well as an estus flask when you begin your journey.",
+            "souls" : "0"
+        },
+        "Siegward of Catarina" : {
+            "covenant" : "None",
+            "history" : "A jolly Undead constantly finding himself in need of assistance.",
+            "items" : "Catarina Set",
+            "location" : "Undead Settlement",
+            "merchant" : "No",
+            "quest" : "You will find him struggling to find a way up an elevator. Soon after he will help you fight a demon.",
+            "souls" : "1,000"
+        },
+        "Bell Keeper" : {
+            "covenant" : "None",
+            "history" : "An aggressive dward dedicated to protecting the bell, a symbol of forbidden love.",
+            "items" : "Rusted Coin",
+            "location" : "Belfry Luna",
+            "merchant" : "No",
+            "quest" : "On your first encounter, he will warn you to stay back or else he will attack. Later on he will tell you of his creation by the Princess to guard the bell.",
+            "souls" : "350"
+        },
+        "Ingward" : {
+            "covenant" : "None",
+            "history" : "Once one of the Sealers, he was once of the sorcerers who flooded New Londo in order to lock away the Darkwraiths and their Kings.",
+            "items" : "Tin Banishment Catalyst, Ghost Blade, Crimson Set",
+            "location" : "New Londo Ruins",
+            "merchant" : "Yes",
+            "quest" : "He is found atop a building in the ruins. Here he will give you the keys needed to drain New Londo and access the abyss.",
+            "souls" : "1,000"
+        },
+        "Paladin Leeroy" : {
+            "covenant" : "Way of White",
+            "history" : "The first Undead created by the Way of White, he is a paladin and pilgrim to Lordran",
+            "items" : "Humanity, Grant, Sanctus",
+            "location" : "Tomb of the Giants",
+            "merchant" : "No",
+            "quest" : "A summonable phatom in the catacombs, but an invading dark spirit in the Tomb of the Giants.",
+            "souls" : "21,236"
+        },
+        "Yoel of Londor" : {
+            "covenant" : "None",
+            "history" : "A pilgrim waiting to die at the foot of the high wall.",
+            "items" : "Hollow's Ashes",
+            "location" : "Undead Settlement",
+            "merchant" : "Yes",
+            "quest" : "Find him waiting to die on the bridge. When he sees you he finds new purpose in his life. Talk to him to draw out your true strength.",
+            "souls" : "N/A"
+        },
+        "Ludleth of Courland" : {
+            "covenant" : "None",
+            "history" : "He linked the fire long ago and became a Lord of Cinder. In this era he is waiting to die and for others to take his place.",
+            "items" : "Skull Ring",
+            "location" : "Firelink Shrine",
+            "merchant" : "Yes",
+            "quest" : "After giving him the transpose kiln, he will transpose souls into items for you.",
+            "souls" : "0"
+        },
+        "Karla" : {
+            "covenant" : "None",
+            "history" : "She is a teacher of dark pyromancies, sorceries, and miracles.",
+            "items" : "Karla's Ashes, Karla's Set",
+            "location" : "Irithyll Dungeon",
+            "merchant" : "Yes",
+            "quest" : "She is found in a locked cell inside Irithyll Dungeon.",
+            "souls" : "1,000"
+        },
+        "Holy Knight Hodrick" : {
+            "covenant" : "Mound Makers",
+            "history" : "Hodrick is the leader of the Mound Makers and grandfather of Sirris",
+            "items" : "Vertebrae Shackle",
+            "location" : "Undead Settlement",
+            "merchant" : "No",
+            "quest" : "You can speak to Hodrick in the Pit of Hollows in order to join the Mound Makers. He will die once the Curse-rotted Greatwood falls onto him.",
+            "souls" : "0"
+        },
+        "Velka the Goddess of Sin" : {
+            "covenant" : "None",
+            "history" : "As the Goddess of Sin, it is her job to define sin and give out punishment. It is also her job to pardon.",
+            "items" : "None",
+            "location" : "Undead Settlement",
+            "merchant" : "No",
+            "quest" : "Praying at her statue provides access to absolution and dissolution.",
+            "souls" : "0"
+        }
+    },
+    "users" : {
+        "OEiOQZDXRbPRJrps51id6RcwSSB2" : {
+            "Sir Vilhelm" : "BIG BAD VOLF"
+        },
+        "W18k5mVUOLehpymUR7jSIbswMhT2" : {
+            "Eygon of Carim" : "zoinkies",
+            "Sir Vilhelm" : "NOPE"
+        },
+        "b5l8LplSSDc1SefsFBhxhuucf8I2" : {
+            "Eygon of Carim" : ""
+        },
+        "iM8EwZeAT1UwC8D4q4PWdR8HYAD2" : {
+            "Eygon of Carim" : "double yoink",
+            "Horace the Hushed" : "hello firebase",
+            "Solaire of Astora" : "pooopppp"
+        },
+        "smjYhmaGyLNciOdfzCwSfLMpuZG2" : {
+            "Eygon of Carim" : "Testing testing",
+            "Sir Vilhelm" : "",
+            "Solaire of Astora" : ""
+        },
+        "tXmU8opmELQDDE7CgOwWcuJbo2r1" : {
+            "Eygon of Carim" : "1234",
+            "Horace the Hushed" : "2134"
+        }
+    }
+}

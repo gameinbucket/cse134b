@@ -1,8 +1,24 @@
 {
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "hosting": {
-    "public": "public"
-  }
+    "database": {
+        "rules": "database.rules.json"
+    },
+    "hosting": {
+        "public": "./public",
+        "headers": [ {
+            "source" : "**/*.@(jpg|png|js|css|ttf)",
+            "headers" : [ {
+                "key" : "Cache-Control",
+                "value" : "max-age=7200"
+            } ]
+        } ],
+        "rewrites": [ {
+            "source": "**",
+            "destination": "/app.html"
+        } ],
+        "ignore": [
+            "firebase.json",
+            "database-rules.json",
+            "storage.rules"
+        ]
+    }
 }

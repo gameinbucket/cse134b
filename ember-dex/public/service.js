@@ -1,4 +1,4 @@
-var cache_name = '6';
+var cache_name = '7';
 
 self.addEventListener('install', function(event) {
     var files_to_cache = [
@@ -28,6 +28,11 @@ self.addEventListener('install', function(event) {
         'bell-keeper.jpg',
         'ingward.jpg',
         'paladin-leeroy.jpg',
+        'yoel-of-londor.jpg',
+        'ludleth-of-courland.jpg',
+        'karla.jpg',
+        'holy-knight-hodrick.jpg',
+        'velka-the-goddess-of-sin.jpg',
     ];
     event.waitUntil(caches.open(cache_name).then(function(cache) {
         console.log(cache_name + ' install: opened cache');

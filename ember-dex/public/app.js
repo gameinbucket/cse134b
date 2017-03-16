@@ -25,6 +25,11 @@ var npcFast = [
     ['Bell Keeper', 'bell-keeper.jpg', 'ds2'],
     ['Ingward', 'ingward.jpg', 'ds1'],
     ['Paladin Leeroy', 'paladin-leeroy.jpg', 'ds1'],
+    ['Yoel of Londor', 'yoel-of-londor.jpg', 'ds3'],
+    ['Ludleth of Courland', 'ludleth-of-courland.jpg', 'ds3'],
+    ['Karla', 'karla.jpg', 'ds3'],
+    ['Holy Knight Hodrick', 'holy-knight-hodrick.jpg', 'ds3'],
+    ['Velka the Goddess of Sin', 'velka-the-goddess-of-sin.jpg', 'ds3'],
 ];
 
 var npcDict = [];
@@ -129,7 +134,7 @@ function list_npc() {
     try {
         var user = firebase.auth().currentUser;
         if (user) {
-            firebase.database().ref('character/').once('value').then(function(snapshot) {
+            firebase.database().ref('character-final/').once('value').then(function(snapshot) {
                 snapshot.forEach(function(childSnapshot) {
                     var name = childSnapshot.key;
                     var data = childSnapshot.val();
@@ -232,7 +237,7 @@ function view_character(index) {
         try_local_storage_to_npc(name);
 
         if (online) {
-            firebase.database().ref('character/' + name).once('value').then(function(snapshot) {
+            firebase.database().ref('character-final/' + name).once('value').then(function(snapshot) {
                 npcDict[name] = snapshot.val();
                 view_character_data(name);
             });
