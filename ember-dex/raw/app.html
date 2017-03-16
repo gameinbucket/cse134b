@@ -183,6 +183,9 @@
             </div>
         </div>
         <script>
+            /* deferred style loading lets us load more important parts of the page first
+             * once we've finished loading we then add css to the head
+             */
             var load_styles = function() {
                 var stylesheet = document.createElement('link');
                 stylesheet.href = 'app.css';
@@ -200,6 +203,9 @@
         </script>
         <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
         <script>
+            /* load firebase and configure it to our unique address
+             * if firebase could not be initialized then we catch the error instead of displaying it
+             */
             var config = {
                 apiKey: "AIzaSyBqjkMw9iaAFseiTOjiMEBP3_0ZPnSkvQs",
                 authDomain: "ember-dex.firebaseapp.com",
@@ -211,7 +217,7 @@
                 firebase.initializeApp(config);
             }
             catch (e) {
-
+                // firebase not found
             }
         </script>
         <script src="app.js"></script>

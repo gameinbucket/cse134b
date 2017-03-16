@@ -1,4 +1,4 @@
-var cache_name = '10';
+var cache_name = '11';
 
 self.addEventListener('install', function(event) {
     var files_to_cache = [

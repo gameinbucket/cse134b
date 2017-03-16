@@ -41,6 +41,9 @@
             </div>
         </main>
         <script>
+            /* deferred style loading lets us load more important parts of the page first
+             * once we've finished loading we then add css to the head
+             */
             var load_styles = function() {
                 var stylesheet = document.createElement('link');
                 stylesheet.href = 'team.css';

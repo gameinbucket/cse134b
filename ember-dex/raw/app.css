@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'princeps';
     src: url(optimus-princeps.ttf);
@@ -292,6 +291,7 @@ select {
     font-size: 3.75em;
     font-weight: bold;
     margin-top: 0.25em;
+    overflow:hidden;
 }
 
 table {
@@ -390,8 +390,6 @@ td {
     font-family: 'princeps';
     font-size: 1.5em;
     font-weight: bold;
-    /* margin: 1em;
-    margin-right: 0.5em; */
     margin: 0.2em;
     white-space: nowrap;
 }
@@ -399,6 +397,7 @@ td {
 #home-search {
     margin-top: 1em;
     margin-bottom: 1em;
+    overflow: hidden;
     display: -ms-flex;
     display: -webkit-flex;
     display: flex;
