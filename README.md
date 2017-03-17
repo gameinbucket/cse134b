@@ -1,6 +1,6 @@
 # Ember-Dex
 # Available at: https://ember-dex.firebaseapp.com
-# Homework 4 moved to: https://ember-dex-framework.firebaseapp.com
+# [Homework 4 has been moved](https://ember-dex-framework.firebaseapp.com)
 Ember-Dex is a web application that allows users to track their favorite character from the popular Dark Souls video game series. Users can sign in to search for and view important character information, and also store personal notes.
 
 ![home page](/screenshots/home-page.png)
@@ -30,17 +30,20 @@ In order to keep the internals of our application as simple as possible we use a
 * Depending on if the user has not logged in yet, they will be greeted by our sign in page where they can sign in with email or google.
 * If they have forgotten their password or wish to create an email account, they can navigate to separate pages to perform these actions.
 * Once the user has signed in, they will automatically be sent to the home page.
-* Every available character will be displayed here on the home page, and they can simply click on a potrait to be sent to the view character page to see relevant data and their personal notes corresponding to the clicked character.
-* If the user wishes to change settings or log out, they can click the Options selector for these choices.
 
 ![siginin page](/screenshots/signin-page.png)
+
+* Every available character will be displayed here on the home page, and they can simply click on a potrait to be sent to the view character page to see relevant data and their personal notes corresponding to the clicked character.
+* If the user wishes to change settings or log out, they can click the Options selector for these choices.
+* The settings page provides the options of: sending an email to change the user's password, clearing all personal notes on characters, and uploading / deleting a profile picture.
+* A user may upload a profile picture that will replace the default profile picture and remain visible whenever they are on the home page.
 
 ## Mobile
 We have taken great care to desgin our application to be mobile friendly. For any screen under 500 pixels, we use special CSS rules to provide a better user experience.
 
 ![view character page mobile](/screenshots/view-character-page-mobile.png)
 
-For the home page in particular, we change the layout of the header to more appropriately accomodate small widths.
+For the home page in particular, we change the layout of the header to more appropriately accomodate small widths. Other than very minor rule changes for small screens, we have designed our website to appear the same while still working well for both desktop and mobile devices.
 
 ## Progressive Web Application
 Using service workers, we have desgined our website to be a progressive web application
@@ -91,3 +94,4 @@ Naturally these performance measurements can vary by quite a bit. Connecting to 
 * When using the application offline, firebase sends a large number of error messages to the console
 * Testing if a firebase connection was successfully made does not always give the expected response
 * Firebase google authentication on Chrome occasionally logs the user in without asking them which account they want to use
+* There is no synching of local files to firebase when in offline mode
