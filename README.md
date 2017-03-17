@@ -23,7 +23,7 @@ Similar to our HTML, we've split our CSS into only app.css and team.css. Because
 All of our external JavaScript code is split between app.js and service.js. These files hold all of the necessary  code for implementing a service worker, navigating between pages, and connecting with firebase for CRUD operations. Our service.js file is a standard service worker script that manages install, fetch, and activate requests so that we can provide a significantly better experience with cached content, as well as an offline experience in conjunction with our manifest.json file. Our app.js contains all of the code used for managing firebase interactions, navigating between  different pages within our single page framework, and using cached local storage as a fallback when the network is not available.
 
 ## File and Code Organization 
-In order to keep the internals of our application as simple as possible we use a minimum number of folders and files. The github folder "ember-dex" contains all of the files used to host our application. In this folder we have a few files needed for firebase deployment and the two folders "public" and "raw". The folder "raw" contains the original code files and images before they have been compressed for production. The "public" folder is all of what we deploy, including the compressed HTML, CSS, JavaScript, JPEGS, manifest, and icons. We chose to organize our file structure in this way due to the relatively few files needed for our application. With everything located in one folder, it's straightforward to find files and make quick edits. Our code architecture follows these same principles. The application code itself uses app.html, app.css, and app.js with service.js separate due to service worker constraints. Each page of our application receives its own div tag and unique id, with users navigating between them by changing the div display from 'block' to 'none' in our JavaScript functions.  
+In order to keep the internals of our application as simple as possible we use a minimum number of folders and files. The github folder "ember-dex" contains all of the files used to host our application. In this folder we have a few files needed for firebase deployment and the two folders "public" and "raw". The folder "raw" contains the original code files and images before they have been compressed for production. The "public" folder is all of what we deploy, including the compressed HTML, CSS, JavaScript, JPEGS, manifest, and icons. We chose to organize our file structure in this way due to the relatively few files needed for our application. With everything located in one folder, it's straightforward to find files and make quick edits. Our code architecture follows these same principles. The application code itself uses app.html, app.css, and app.js with service.js separate due to service worker constraints. Relevant code documentation is provided as comments inside the files. Each page of our application receives its own div tag and unique id, with users navigating between them by changing the div display from 'block' to 'none' in our JavaScript functions.  
 
 ## Navigation
 * When opening our application, a splash page will appear until the minimum resources are loaded.
@@ -40,11 +40,54 @@ We have taken great care to desgin our application to be mobile friendly. For an
 
 ![view character page mobile](/screenshots/view-character-page-mobile.png)
 
+For the home page in particular, we change the layout of the header to more appropriately accomodate small widths.
+
 ## Progressive Web Application
 Using service workers, we have desgined our website to be a progressive web application
 
-## Performance and Design
-service workers, caching, single page
+## Performance Testing
+Chrome/First Run/No Throttle:
+* 35 requests
+* 234 KB transferred
+* Finish 1.62 seconds
+* DOMContentLoaded 267 ms
+* Load 267 ms
+
+Chrome/Second Run/No Throttle:
+* 40 requests
+* 2.5 KB transferred
+* Finish 3.21 seconds
+* DOMContentLoaded 129 ms
+* Load 142 ms
+
+[Web Page Performane Test](https://www.webpagetest.org)
+* Bytes: 72% images, 14.6% fonts, 12.3% JavaScript, 1.1% HTML and CSS
+
+First Run
+* Load Time: 1.283 seconds
+* Start Render: 0.694 seconds
+* Document Complete: 1.283 seconds, 8 requests, 280 KB in
+* Fully Loaded: 2.902 seconds,  35 requests, 997 KB in
+
+Second Run
+* Load Time: 0.955 seconds
+* Start Render: 0.501 seconds
+* Document Complete: 0.955 seconds, 8 requests, 280 KB in
+* Fully Loaded: 2.338 seconds,  35 requests, 996 KB in
+
+Lighthouse:
+* 100/100 progressive web app score
+* first meaningful paint: 1469.8 ms
+* first visual change: 399 ms
+* last visual change: 1727 ms
+* time to interactive: 1472 ms
+
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/):
+* 98/100 mobile and desktop score
+
+Naturally these performance measurements can vary by quite a bit. Connecting to firebase in particular can cause significant slow downs in some instances. The availability of service workers can speed up loading times significantly by serving cached assets, with images and fonts in particular benefitting from this.
 
 ## Known Issues
-firebase
+* When using the application offline, firebase sends a large number of error messages to the console
+* Testing if a firebase connection was successfully made does not always give the expected response
+* Firebase google authentication on Chrome occasionally logs the user in without asking them which account they want to use
