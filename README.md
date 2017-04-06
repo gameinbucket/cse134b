@@ -1,6 +1,5 @@
 # Ember-Dex
 # Available at: https://ember-dex.firebaseapp.com
-# Homework 4 has been moved to: https://ember-dex-framework.firebaseapp.com
 Ember-Dex is a web application that allows users to track their favorite character from the popular Dark Souls video game series. Users can sign in to search for and view important character information, and also store personal notes
 
 ![home page](/screenshots/home-page.png)
